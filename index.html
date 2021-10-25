@@ -1,0 +1,398 @@
+<html>
+
+<head>
+    <title>DSCR Calculator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="XXX" class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label for="borrowerName" class="control-label col-sm-6 required">Borrower Name</label>
+                        <div class="col-sm-6">
+                            <input id="borrowerName" name="borrowerName" type="text" required="required"
+                                class="form-control" value="Ken Smith">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyAddress1" class="control-label col-sm-6">Property Street Address</label>
+                        <div class="col-sm-6">
+                            <input id="propertyAddress1" name="propertyAddress1" type="text" required="required"
+                                class="form-control" value="123 Easy St">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyAddress2" class="control-label col-sm-6">Property City, State, ZIP</label>
+                        <div class="col-sm-6">
+                            <input id="propertyAddress2" name="propertyAddress2" type="text" required="required"
+                                class="form-control" value="Anywhere, ST 12345">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="ficoScore" class="control-label col-sm-6">Borrower Middle FICO Score</label>
+                        <div class="col-sm-6">
+                            <input id="ficoScore" name="ficoScore" type="number" class="form-control" value="800" data-cell="C13">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="numUnits" class="control-label col-sm-6"># of Units</label>
+                        <div class="col-sm-6">
+                            <input id="numUnits" name="numUnits" type="number" class="form-control" step="1" value="1" data-cell="C14">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="purposeOfLoan" class="control-label col-sm-6">Purpose of Loan</label>
+                        <div class="col-sm-6">
+                            <select id="purposeOfLoan" name="purposeOfLoan" required="required"
+                                class="select form-control" data-cell="C15">
+                                <option value="Purchase">Purchase</option>
+                                <option value="RateAndTerm" selected>Rate &amp; Term</option>
+                                <option value="Cashout">Cashout</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="valueBorrowerPrimary" class="control-label col-sm-6">Value of Borrower's
+                            Primary</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="valueBorrowerPrimary" name="valueBorrowerPrimary" type="text"
+                                    required="required" class="form-control" value="2000000" data-cell="E10" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="valueSubjectProperty" class="control-label col-sm-6">Value of Subject
+                            Property</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="valueSubjectProperty" name="valueSubjectProperty" type="text"
+                                    required="required" class="form-control" value="1000000" data-cell="E11" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="proposedLoanAmt" class="control-label col-sm-6">Proposed Loan Amount</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="proposedLoanAmt" name="proposedLoanAmt" type="text" required="required"
+                                    class="form-control" value="450000" data-cell="E12" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectPropertyEstMonthlyRent" class="control-label col-sm-6">Subject Property Est.
+                            Monthly Rent</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="subjectPropertyEstMonthlyRent" name="subjectPropertyEstMonthlyRent"
+                                    type="text" required="required" class="form-control" value="5000" data-cell="E13" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectPropertyEstMonthlyInsur" class="control-label col-sm-6">Subject Property Est.
+                            Monthly Insurance</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="subjectPropertyEstMonthlyInsur" name="subjectPropertyEstMonthlyInsur"
+                                    type="text" required="required" class="form-control" value="250" data-cell="E14" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subjectPropertyEstMonthlyPropTaxes" class="control-label col-sm-6">Subject Property
+                            Est. Monthly Property Taxes</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="subjectPropertyEstMonthlyPropTaxes" name="subjectPropertyEstMonthlyPropTaxes"
+                                    type="text" required="required" class="form-control" value="1200" data-cell="E15" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="optMonthlyHoaDues" class="control-label col-sm-6">Monthly Homeowners Association
+                            Dues (if any)</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="optMonthlyHoaDues" name="optMonthlyHoaDues" type="text"
+                                    class="form-control" value="0" data-cell="E16" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="radioInterestOnlyDesired" class="control-label col-sm-6">Interest Only
+                            Desired?</label>
+                        <div class="col-sm-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="radioInterestOnlyDesired" value="Yes" checked data-cell="E19"> Yes </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="radioInterestOnlyDesired" value="No" data-cell="E19"> No </label>
+                            <span id="radioInterestOnlyDesiredHelpBlock" class="help-block">Typical answer is: No</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="radioUseNoRatioInstead" class="control-label col-sm-6">Use No Ratio Instead?</label>
+                        <div class="col-sm-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="radioUseNoRatioInstead" value="Yes" checked data-cell="E20"> Yes </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="radioUseNoRatioInstead" value="No" data-cell="E20"> No </label>
+                            <span id="radioUseNoRatioInsteadHelpBlock" class="help-block">Typical answer is: No</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="outLtvRatio" class="control-label col-sm-6">Loan-to-Value (LTV) Ratio</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <input id="outLtvRatio" name="outLtvRatio" type="text" class="form-control disabled"
+                                    readonly data-cell="C16" data-formula="E11/E12" data-format="0.00 %">
+                                <div class="input-group-addon">%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="outEstIntRate" class="control-label col-sm-6">Estimated Interest Rate</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <input id="outEstIntRate" name="outEstIntRate" type="text" readonly
+                                    class="form-control disabled" data-formula="+BB23" data-format="0.00 %">
+                                <div class="input-group-addon">%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="outPrincipalAndInterest" class="control-label col-sm-6">Principal &amp;
+                            Interest</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="outPrincipalAndInterest" name="outPrincipalAndInterest" type="text" readonly
+                                    class="form-control disabled" data-formula="XXX" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="outSubjectPiti" class="control-label col-sm-6">Subject Property Combined Payment
+                            (PITI)</label>
+                        <div class="col-sm-6">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input id="outSubjectPiti" name="outSubjectPiti" type="text" readonly
+                                    class="form-control disabled" data-formula="SUM(E14:E17)" data-format="$ 0,0[.]00">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="outDscrValue" class="control-label col-sm-6">Debt Service Coverage Ratio
+                            (DSCR)</label>
+                        <div class="col-sm-6">
+                            <input id="outDscrValue" name="outDscrValue" type="text" class="form-control disabled"
+                                readonly data-formula="IF(BB17="NA","Error",+E13/E18)">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-offset-6 col-sm-6">
+                            <button name="submit" type="submit" class="btn btn-default">Calculate</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/numeral@1.4.5/numeral.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/xsanisty/calx.js@2.2.7/jquery-calx-2.2.7.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        // Wait for the DOM to be ready
+        $(function () {
+            // var _REGEX_PERCENT = /^((0|[1-9]\d?)(\.\d{1,2})?|100(\.00?)?)$/;
+            var _ERR_MSG_PERCENT = 'Please enter a valid percentage (up to two decimal places)';
+            var _ERR_MSG_DOLLAR = 'Please enter a valid dollar amount';
+            var _OPTS_PERCENT = {
+                required: true,
+                range: [0, 100],
+                // pattern: _REGEX_PERCENT,
+                step: 0.01,
+            };
+            var _OPTS_DOLLAR_AMT = {
+                required: true,
+                digits: true,
+                min: 0,
+            };
+            var _OPTS_DOLLAR_AMT_OPTIONAL = {
+                required: false,
+                digits: true,
+                min: 0,
+            };
+
+            // override jquery validate plugin defaults
+            $.validator.setDefaults({
+
+                errorElement: "span",
+                errorClass: "help-block",
+                highlight: function (element, errorClass, validClass) {
+                    // Only validation controls
+                    if (!$(element).hasClass('novalidation')) {
+                        $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+                    }
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    // Only validation controls
+                    if (!$(element).hasClass('novalidation')) {
+                        $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+                    }
+                },
+                errorPlacement: function (error, element) {
+                    if (element.parent('.input-group').length) {
+                        error.insertAfter(element.parent());
+                    } else if (element.prop('type') === 'radio' && element.parent('.radio-inline').length) {
+                        error.insertAfter(element.parent().parent());
+                    } else if (element.prop('type') === 'checkbox' || element.prop('type') === 'radio') {
+                        error.appendTo(element.parent().parent());
+                    } else {
+                        error.insertAfter(element);
+                    }
+                }
+            }); //END: `$.validator.setDefaults(...)`
+
+            // Initialize form validation on the registration form.
+            // It has the name attribute "registration"
+            $("form#XXX").validate({
+                // Specify validation rules
+                rules: {
+                    // The key name on the left side is the name attribute
+                    // of an input field. Validation rules are defined
+                    // on the right side
+                    borrowerName: {
+                        required: true,
+                    },
+                    propertyAddress1: {
+                        required: true,
+                    },
+                    propertyAddress2: {
+                        required: true,
+                    },
+                    ficoScore: {
+                        required: true,
+                        digits: true,
+                        min: 640,
+                        max: 850,
+                    },
+                    numUnits: {
+                        required: true,
+                        digits: true,
+                        range: [1, 99999],
+                    },
+                    purposeOfLoan: {
+                        required: true,
+                    },
+                    valueBorrowerPrimary: _OPTS_DOLLAR_AMT,
+                    valueSubjectProperty: _OPTS_DOLLAR_AMT,
+                    proposedLoanAmt: _OPTS_DOLLAR_AMT,
+                    subjectPropertyEstMonthlyRent: _OPTS_DOLLAR_AMT,
+                    subjectPropertyEstMonthlyInsur: _OPTS_DOLLAR_AMT,
+                    subjectPropertyEstMonthlyPropTaxes: _OPTS_DOLLAR_AMT,
+                    optMonthlyHoaDues: _OPTS_DOLLAR_AMT_OPTIONAL,
+                    radioInterestOnlyDesired: {
+                        required: true,
+                    },
+                    radioUseNoRatioInstead: {
+                        required: true,
+                    },
+                    // outLtvRatio: _OPTS_PERCENT,
+                    // outEstIntRate: _OPTS_PERCENT,
+                    // outPrincipalAndInterest: _OPTS_DOLLAR_AMT,
+                    // outSubjectPiti: _OPTS_DOLLAR_AMT,
+                },
+                // Specify validation error messages
+                messages: {
+                    XXX: {
+                        XXX: _ERR_MSG_DOLLAR,
+                    },
+                    YYY: "YYY",
+                },
+                // Make sure the form is submitted to the destination defined
+                // in the "action" attribute of the form when valid
+                submitHandler: function (form) {
+                    //form.submit();
+                }
+            }); //END: `$(...).validate(...)`
+
+            $("form#XXX").calx({
+                data: {
+                    /* beautify ignore:start */
+                    //BEGIN: Pricing as of 6/11/21
+                    AA5: '', BB5: 50, CC5: 55, DD5: 60, EE5: 65, FF5: 70, GG5: 75, HH5: 80,
+                    AA6: 760, BB6: 3.999, CC6: 4.125, DD6: 4.250, EE6: 4.250, FF6: 4.375, GG6: 4.500, HH6: 4.625,
+                    AA7: 740, BB7: 4.125, CC7: 4.250, DD7: 4.375, EE7: 4.375, FF7: 4.500, GG7: 4.625, HH7: 4.750,
+                    AA8: 720, BB8: 4.250, CC8: 4.375, DD8: 4.500, EE8: 4.500, FF8: 4.625, GG8: 4.750, HH8: 4.999,
+                    AA9: 700, BB9: 4.375, CC9: 4.500, DD9: 4.625, EE9: 4.750, FF9: 4.875, GG9: 4.999, HH9: 5.250,
+                    AA10: 680, BB10: 4.500, CC10: 4.625, DD10: 4.750, EE10: 4.875, FF10: 5.125, GG10: 5.250, HH10: 5.625,
+                    AA11: 660, BB11: 4.875, CC11: 4.999, DD11: 5.125, EE11: 5.375, FF11: 5.625, GG11: 5.625, HH11: 6.250,
+                    AA12: 640, BB12: 5.250, CC12: 5.375, DD12: 5.500, EE12: 5.750, FF12: 5.999, GG12: 6.250, HH12: 6.875,
+                    //END
+                    /* beautify ignore:end */
+                    ABS_Score: {
+                        formula: 'IF(C13<660,"NA",IF(AND(C13<680,C13>=660),660,IF(AND(C13<700,C13>=680),680,IF(AND(C13<700,C13>=680),680,IF(AND(C13<720,C13>=700),700,IF(AND(C13<740,C13>=720),720,IF(AND(C13<760,C13>=740),740,IF(C13>=760,760))))))))',
+                    },
+                    ABS_LTV: {
+                        formula: 'IF(C16<=0.5,0.5,IF(AND(C16<=0.55,C16>0.5),0.55,IF(AND(C16<=0.6,C16>0.55),0.6,IF(AND(C16<=0.65,C16>0.6),0.65,IF(AND(C16<=0.7,C16>0.65),0.7,IF(AND(C16<=0.75,C16>0.7),0.75,IF(AND(C16<=0.8,C16>0.75),0.8,IF(C16>0.75,"NA"))))))))',
+                    },
+                    Base_Rate: {
+                        formula: 'INDEX(BB6:HH12,MATCH(BB14,AA6:AA12,-1),MATCH(BB15,BB5:HH5,1))',
+                    },
+                    TWO_FOUR_Units: {
+                        formula: 'IF(C14>=2,0.25%,0)',
+                    },
+                    IO: {
+                        formula: 'IF(E19="Yes",0.25%,0)',
+                    },
+                    No_DSCR: {
+                        formula: 'IF(E20="Yes",0.25%,0)',
+                    },
+                    CashOut: {
+                        formula: 'IF(C15="Cashout",0.25%,0)',
+                    },
+                    Net_BPC_Rate: {
+                        formula: '+BB17+SUM(BB19:BB22)',
+                    },
+                    LPC_Add: {
+                        formula: 'IF(C18>0.02,0.01,+C18/2)',
+                    },
+                    Net_LPC_Rate: {
+                        formula: '+BB23+BB24',
+                    },
+                },//END: `data`
+                // onAfterCalculate: function () { /* do the process here */ }
+            });
+        });
+    </script>
+
+</body>
