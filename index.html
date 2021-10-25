@@ -212,6 +212,84 @@
                                 readonly data-formula="IF(BB17="NA","NOOOOOOO",+E13/E18)">
                         </div>
                     </div>
+
+                    <!--XXX BEGIN DEBUG VALUES-->
+                    <hr>
+                    <div class="form-group">
+                        <label for="hidABS_Score" class="control-label col-sm-6">ABS_Score</label>
+                        <div class="col-sm-6">
+                            <input id="hidABS_Score" name="hidABS_Score" type="text" class="form-control disabled"
+                                readonly data-cell="AB14">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidABS_LTV" class="control-label col-sm-6">ABS_LTV</label>
+                        <div class="col-sm-6">
+                            <input id="hidABS_LTV" name="hidABS_LTV" type="text" class="form-control disabled"
+                                readonly data-cell="AB15">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidBase_Rate" class="control-label col-sm-6">Base_Rate</label>
+                        <div class="col-sm-6">
+                            <input id="hidBase_Rate" name="hidBase_Rate" type="text" class="form-control disabled"
+                                readonly data-cell="AB17">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidTWO_to_FOUR_Units" class="control-label col-sm-6">TWO_to_FOUR_Units</label>
+                        <div class="col-sm-6">
+                            <input id="hidTWO_to_FOUR_Units" name="hidTWO_to_FOUR_Units" type="text" class="form-control disabled"
+                                readonly data-cell="AB19">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidIO" class="control-label col-sm-6">IO</label>
+                        <div class="col-sm-6">
+                            <input id="hidIO" name="hidIO" type="text" class="form-control disabled"
+                                readonly data-cell="AB20">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidNo_DSCR" class="control-label col-sm-6">No_DSCR</label>
+                        <div class="col-sm-6">
+                            <input id="hidNo_DSCR" name="hidNo_DSCR" type="text" class="form-control disabled"
+                                readonly data-cell="AB21">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidCashOut" class="control-label col-sm-6">CashOut</label>
+                        <div class="col-sm-6">
+                            <input id="hidCashOut" name="hidCashOut" type="text" class="form-control disabled"
+                                readonly data-cell="AB22">
+                        </div>
+                    </div>
+                    <!--
+                    <div class="form-group">
+                        <label for="hidNet_BPC_Rate" class="control-label col-sm-6">Net_BPC_Rate</label>
+                        <div class="col-sm-6">
+                            <input id="hidNet_BPC_Rate" name="hidNet_BPC_Rate" type="text" class="form-control disabled"
+                                readonly data-cell="AB23">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidLPC_Add" class="control-label col-sm-6">LPC_Add</label>
+                        <div class="col-sm-6">
+                            <input id="hidLPC_Add" name="hidLPC_Add" type="text" class="form-control disabled"
+                                readonly data-cell="AB24">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="hidNet_LPC_Rate" class="control-label col-sm-6">Net_LPC_Rate</label>
+                        <div class="col-sm-6">
+                            <input id="hidNet_LPC_Rate" name="hidNet_LPC_Rate" type="text" class="form-control disabled"
+                                readonly data-cell="AB25">
+                        </div>
+                    </div>
+                    -->
+                    <hr>
+                    <!--XXX END DEBUG VALUES-->
+
                     <div class="form-group row">
                         <div class="col-sm-offset-6 col-sm-6">
                             <button name="submit" type="submit" class="btn btn-default">Calculate</button>
@@ -232,7 +310,6 @@
     <script>
         // Wait for the DOM to be ready
         $(function () {
-            // var _REGEX_PERCENT = /^((0|[1-9]\d?)(\.\d{1,2})?|100(\.00?)?)$/;
             var _ERR_MSG_PERCENT = 'Please enter a valid percentage (up to two decimal places)';
             var _ERR_MSG_DOLLAR = 'Please enter a valid dollar amount';
             var _OPTS_PERCENT = {
@@ -243,18 +320,19 @@
             };
             var _OPTS_DOLLAR_AMT = {
                 required: true,
-                digits: true,
+                number: true,
                 min: 0,
+                step: 0.01,
             };
             var _OPTS_DOLLAR_AMT_OPTIONAL = {
                 required: false,
-                digits: true,
+                number: true,
                 min: 0,
+                step: 0.01,
             };
 
             // override jquery validate plugin defaults
             $.validator.setDefaults({
-
                 errorElement: "span",
                 errorClass: "help-block",
                 highlight: function (element, errorClass, validClass) {
@@ -349,46 +427,46 @@
                 data: {
                     /* beautify ignore:start */
                     //BEGIN: Pricing as of 6/11/21
-                    AA5: '', BB5: 50, CC5: 55, DD5: 60, EE5: 65, FF5: 70, GG5: 75, HH5: 80,
-                    AA6: 760, BB6: 3.999, CC6: 4.125, DD6: 4.250, EE6: 4.250, FF6: 4.375, GG6: 4.500, HH6: 4.625,
-                    AA7: 740, BB7: 4.125, CC7: 4.250, DD7: 4.375, EE7: 4.375, FF7: 4.500, GG7: 4.625, HH7: 4.750,
-                    AA8: 720, BB8: 4.250, CC8: 4.375, DD8: 4.500, EE8: 4.500, FF8: 4.625, GG8: 4.750, HH8: 4.999,
-                    AA9: 700, BB9: 4.375, CC9: 4.500, DD9: 4.625, EE9: 4.750, FF9: 4.875, GG9: 4.999, HH9: 5.250,
-                    AA10: 680, BB10: 4.500, CC10: 4.625, DD10: 4.750, EE10: 4.875, FF10: 5.125, GG10: 5.250, HH10: 5.625,
-                    AA11: 660, BB11: 4.875, CC11: 4.999, DD11: 5.125, EE11: 5.375, FF11: 5.625, GG11: 5.625, HH11: 6.250,
-                    AA12: 640, BB12: 5.250, CC12: 5.375, DD12: 5.500, EE12: 5.750, FF12: 5.999, GG12: 6.250, HH12: 6.875,
+                    AA5: '',   AB5: 50,     AC5: 55,     AD5: 60,     AE5: 65,     AF5: 70,     AG5: 75,     AH5: 80,
+                    AA6: 760,  AB6: 3.999,  AC6: 4.125,  AD6: 4.250,  AE6: 4.250,  AF6: 4.375,  AG6: 4.500,  AH6: 4.625,
+                    AA7: 740,  AB7: 4.125,  AC7: 4.250,  AD7: 4.375,  AE7: 4.375,  AF7: 4.500,  AG7: 4.625,  AH7: 4.750,
+                    AA8: 720,  AB8: 4.250,  AC8: 4.375,  AD8: 4.500,  AE8: 4.500,  AF8: 4.625,  AG8: 4.750,  AH8: 4.999,
+                    AA9: 700,  AB9: 4.375,  AC9: 4.500,  AD9: 4.625,  AE9: 4.750,  AF9: 4.875,  AG9: 4.999,  AH9: 5.250,
+                    AA10: 680, AB10: 4.500, AC10: 4.625, AD10: 4.750, AE10: 4.875, AF10: 5.125, AG10: 5.250, AH10: 5.625,
+                    AA11: 660, AB11: 4.875, AC11: 4.999, AD11: 5.125, AE11: 5.375, AF11: 5.625, AG11: 5.625, AH11: 6.250,
+                    AA12: 640, AB12: 5.250, AC12: 5.375, AD12: 5.500, AE12: 5.750, AF12: 5.999, AG12: 6.250, AH12: 6.875,
                     //END
                     /* beautify ignore:end */
-                    BB14: {//ABS_Score
+                    AB14: {//ABS_Score
                         formula: 'IF(C13<660,"NA",IF(AND(C13<680,C13>=660),660,IF(AND(C13<700,C13>=680),680,IF(AND(C13<700,C13>=680),680,IF(AND(C13<720,C13>=700),700,IF(AND(C13<740,C13>=720),720,IF(AND(C13<760,C13>=740),740,IF(C13>=760,760))))))))',
                     },
-                    BB15: {//ABS_LTV
+                    AB15: {//ABS_LTV
                         formula: 'IF(C16<=0.5,0.5,IF(AND(C16<=0.55,C16>0.5),0.55,IF(AND(C16<=0.6,C16>0.55),0.6,IF(AND(C16<=0.65,C16>0.6),0.65,IF(AND(C16<=0.7,C16>0.65),0.7,IF(AND(C16<=0.75,C16>0.7),0.75,IF(AND(C16<=0.8,C16>0.75),0.8,IF(C16>0.75,"NA"))))))))',
                     },
-                    BB17: {//Base_Rate
-                        formula: 'INDEX(BB6:HH12,MATCH(BB14,AA6:AA12,-1),MATCH(BB15,BB5:HH5,1))',
+                    AB17: {//Base_Rate
+                        formula: 'INDEX(AB6:AH12,MATCH(AB14,AA6:AA12,-1),MATCH(AB15,AB5:AH5,1))',
                     },
-                    BB19: {//TWO_to_FOUR_Units
+                    AB19: {//TWO_to_FOUR_Units
                         formula: 'IF(C14>=2,0.25%,0)',
                     },
-                    BB20: {//IO
+                    AB20: {//IO
                         formula: 'IF(E19="Yes",0.25%,0)',
                     },
-                    BB21: {//No_DSCR
+                    AB21: {//No_DSCR
                         formula: 'IF(E20="Yes",0.25%,0)',
                     },
-                    BB22: {//CashOut
+                    AB22: {//CashOut
                         formula: 'IF(C15="Cashout",0.25%,0)',
                     },
-                    BB23: {//Net_BPC_Rate
-                        formula: '+BB17+SUM(BB19:BB22)',
-                    },
-                    BB24: {//LPC_Add
-                        formula: 'IF(C18>0.02,0.01,+C18/2)',
-                    },
-                    BB25: {//Net_LPC_Rate
-                        formula: '+BB23+BB24',
-                    },
+                    // AB23: {//Net_BPC_Rate
+                    //     formula: '+AB17+SUM(AB19:AB22)',
+                    // },
+                    // AB24: {//LPC_Add
+                    //     formula: 'IF(C18>0.02,0.01,+C18/2)',
+                    // },
+                    // AB25: {//Net_LPC_Rate
+                    //     formula: '+AB23+AB24',
+                    // },
                 },//END: `data`
                 // onAfterCalculate: function () { /* do the process here */ }
             });
