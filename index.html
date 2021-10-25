@@ -167,7 +167,7 @@
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
                                 <input id="outLtvRatio" name="outLtvRatio" type="text" class="form-control disabled"
-                                    readonly data-cell="C16" data-formula="E11/E12" data-format="0.00 %">
+                                    readonly disabled data-cell="C16" data-formula="E11/E12" data-format="0.00 %">
                                 <!-- <div class="input-group-addon">%</div> -->
                             <!-- </div> -->
                         </div>
@@ -176,8 +176,8 @@
                         <label for="outEstIntRate" class="control-label col-sm-6">Estimated Interest Rate</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <input id="outEstIntRate" name="outEstIntRate" type="text" readonly
-                                    class="form-control disabled" data-formula="+BB23" data-format="0.00 %">
+                                <input id="outEstIntRate" name="outEstIntRate" type="text" readonly disabled
+                                    class="form-control disabled" data-formula="+AB23" data-format="0.00 %">
                                 <!-- <div class="input-group-addon">%</div> -->
                             <!-- </div> -->
                         </div>
@@ -188,8 +188,8 @@
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
                                 <!-- <div class="input-group-addon">$</div> -->
-                                <input id="outPrincipalAndInterest" name="outPrincipalAndInterest" type="text" readonly
-                                    class="form-control disabled" data-formula="IF(BB25="Error","Error",PMT(BB25/12,360,E12,0,1)*-1)" data-format="$ 0,0[.]00">
+                                <input id="outPrincipalAndInterest" name="outPrincipalAndInterest" type="text" readonly disabled
+                                    class="form-control disabled" data-formula="IF(AB25="Error","Error",PMT(AB25/12,360,E12,0,1)*-1)" data-format="$ 0,0[.]00">
                                 <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
                         </div>
@@ -200,7 +200,7 @@
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
                                 <!-- <div class="input-group-addon">$</div> -->
-                                <input id="outSubjectPiti" name="outSubjectPiti" type="text" readonly
+                                <input id="outSubjectPiti" name="outSubjectPiti" type="text" readonly disabled
                                     class="form-control disabled" data-formula="SUM(E14:E17)" data-format="$ 0,0[.]00">
                                 <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div>  -->
@@ -211,7 +211,7 @@
                             (DSCR)</label>
                         <div class="col-sm-6">
                             <input id="outDscrValue" name="outDscrValue" type="text" class="form-control disabled"
-                                readonly data-formula="IF(BB17="NA","NOOOOOOO",+E13/E18)">
+                                readonly disabled data-formula="IF(AB17="NA","NOOOOOOO",+E13/E18)">
                         </div>
                     </div>
 
@@ -221,70 +221,70 @@
                         <label for="hidABS_Score" class="control-label col-sm-6">ABS_Score</label>
                         <div class="col-sm-6">
                             <input id="hidABS_Score" name="hidABS_Score" type="text" class="form-control disabled"
-                                readonly data-cell="AB14">
+                                readonly disabled data-cell="AB14">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidABS_LTV" class="control-label col-sm-6">ABS_LTV</label>
                         <div class="col-sm-6">
                             <input id="hidABS_LTV" name="hidABS_LTV" type="text" class="form-control disabled"
-                                readonly data-cell="AB15">
+                                readonly disabled data-cell="AB15">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidBase_Rate" class="control-label col-sm-6">Base_Rate</label>
                         <div class="col-sm-6">
                             <input id="hidBase_Rate" name="hidBase_Rate" type="text" class="form-control disabled"
-                                readonly data-cell="AB17">
+                                readonly disabled data-cell="AB17">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidTWO_to_FOUR_Units" class="control-label col-sm-6">TWO_to_FOUR_Units</label>
                         <div class="col-sm-6">
                             <input id="hidTWO_to_FOUR_Units" name="hidTWO_to_FOUR_Units" type="text" class="form-control disabled"
-                                readonly data-cell="AB19">
+                                readonly disabled data-cell="AB19">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidIO" class="control-label col-sm-6">IO</label>
                         <div class="col-sm-6">
                             <input id="hidIO" name="hidIO" type="text" class="form-control disabled"
-                                readonly data-cell="AB20">
+                                readonly disabled data-cell="AB20">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidNo_DSCR" class="control-label col-sm-6">No_DSCR</label>
                         <div class="col-sm-6">
                             <input id="hidNo_DSCR" name="hidNo_DSCR" type="text" class="form-control disabled"
-                                readonly data-cell="AB21">
+                                readonly disabled data-cell="AB21">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidCashOut" class="control-label col-sm-6">CashOut</label>
                         <div class="col-sm-6">
                             <input id="hidCashOut" name="hidCashOut" type="text" class="form-control disabled"
-                                readonly data-cell="AB22">
+                                readonly disabled data-cell="AB22">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidNet_BPC_Rate" class="control-label col-sm-6">Net_BPC_Rate</label>
                         <div class="col-sm-6">
                             <input id="hidNet_BPC_Rate" name="hidNet_BPC_Rate" type="text" class="form-control disabled"
-                                readonly data-cell="AB23">
+                                readonly disabled data-cell="AB23">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidLPC_Add" class="control-label col-sm-6">LPC_Add</label>
                         <div class="col-sm-6">
                             <input id="hidLPC_Add" name="hidLPC_Add" type="text" class="form-control disabled"
-                                readonly data-cell="AB24">
+                                readonly disabled data-cell="AB24">
                         </div>
                     </div>
                     <div class="form-group bg-danger">
                         <label for="hidNet_LPC_Rate" class="control-label col-sm-6">Net_LPC_Rate</label>
                         <div class="col-sm-6">
                             <input id="hidNet_LPC_Rate" name="hidNet_LPC_Rate" type="text" class="form-control disabled"
-                                readonly data-cell="AB25">
+                                readonly disabled data-cell="AB25">
                         </div>
                     </div>
                     <hr>
