@@ -187,7 +187,7 @@
                             <div class="input-group">
                                 <div class="input-group-addon">$</div>
                                 <input id="outPrincipalAndInterest" name="outPrincipalAndInterest" type="text" readonly
-                                    class="form-control disabled" data-formula="XXX" data-format="$ 0,0[.]00">
+                                    class="form-control disabled" data-formula="IF(BB25="Error","Error",PMT(BB25/12,360,E12,0,1)*-1)" data-format="$ 0,0[.]00">
                                 <div class="input-group-addon">.00</div>
                             </div>
                         </div>
@@ -209,7 +209,7 @@
                             (DSCR)</label>
                         <div class="col-sm-6">
                             <input id="outDscrValue" name="outDscrValue" type="text" class="form-control disabled"
-                                readonly data-formula="IF(BB17="NA","Error",+E13/E18)">
+                                readonly data-formula="IF(BB17="NA","NOOOOOOO",+E13/E18)">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -359,34 +359,34 @@
                     AA12: 640, BB12: 5.250, CC12: 5.375, DD12: 5.500, EE12: 5.750, FF12: 5.999, GG12: 6.250, HH12: 6.875,
                     //END
                     /* beautify ignore:end */
-                    ABS_Score: {
+                    BB14: {//ABS_Score
                         formula: 'IF(C13<660,"NA",IF(AND(C13<680,C13>=660),660,IF(AND(C13<700,C13>=680),680,IF(AND(C13<700,C13>=680),680,IF(AND(C13<720,C13>=700),700,IF(AND(C13<740,C13>=720),720,IF(AND(C13<760,C13>=740),740,IF(C13>=760,760))))))))',
                     },
-                    ABS_LTV: {
+                    BB15: {//ABS_LTV
                         formula: 'IF(C16<=0.5,0.5,IF(AND(C16<=0.55,C16>0.5),0.55,IF(AND(C16<=0.6,C16>0.55),0.6,IF(AND(C16<=0.65,C16>0.6),0.65,IF(AND(C16<=0.7,C16>0.65),0.7,IF(AND(C16<=0.75,C16>0.7),0.75,IF(AND(C16<=0.8,C16>0.75),0.8,IF(C16>0.75,"NA"))))))))',
                     },
-                    Base_Rate: {
+                    BB17: {//Base_Rate
                         formula: 'INDEX(BB6:HH12,MATCH(BB14,AA6:AA12,-1),MATCH(BB15,BB5:HH5,1))',
                     },
-                    TWO_FOUR_Units: {
+                    BB19: {//TWO_to_FOUR_Units
                         formula: 'IF(C14>=2,0.25%,0)',
                     },
-                    IO: {
+                    BB20: {//IO
                         formula: 'IF(E19="Yes",0.25%,0)',
                     },
-                    No_DSCR: {
+                    BB21: {//No_DSCR
                         formula: 'IF(E20="Yes",0.25%,0)',
                     },
-                    CashOut: {
+                    BB22: {//CashOut
                         formula: 'IF(C15="Cashout",0.25%,0)',
                     },
-                    Net_BPC_Rate: {
+                    BB23: {//Net_BPC_Rate
                         formula: '+BB17+SUM(BB19:BB22)',
                     },
-                    LPC_Add: {
+                    BB24: {//LPC_Add
                         formula: 'IF(C18>0.02,0.01,+C18/2)',
                     },
-                    Net_LPC_Rate: {
+                    BB25: {//Net_LPC_Rate
                         formula: '+BB23+BB24',
                     },
                 },//END: `data`
