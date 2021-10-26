@@ -1,11 +1,17 @@
 <html>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta charset="utf-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1"
+>
 
 <head>
     <title>DSCR Calculator</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    >
 </head>
 
 <body>
@@ -13,278 +19,607 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <form id="XXX" class="form-horizontal" action="">
+                <form
+                    id="calxForm"
+                    class="form-horizontal"
+                    action=""
+                >
                     <div class="form-group">
-                        <label for="borrowerName" class="control-label col-sm-6 required">Borrower Name</label>
+                        <label
+                            for="borrowerName"
+                            class="control-label col-sm-6 required"
+                        >Borrower Name</label>
                         <div class="col-sm-6">
-                            <input id="borrowerName" name="borrowerName" type="text" required="required"
-                                class="form-control" value="Ken Smith">
+                            <input
+                                id="borrowerName"
+                                name="borrowerName"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="Ken Smith"
+                            >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="propertyAddress1" class="control-label col-sm-6">Property Street Address</label>
+                        <label
+                            for="propertyAddress1"
+                            class="control-label col-sm-6"
+                        >Property Street Address</label>
                         <div class="col-sm-6">
-                            <input id="propertyAddress1" name="propertyAddress1" type="text" required="required"
-                                class="form-control" value="123 Easy St">
+                            <input
+                                id="propertyAddress1"
+                                name="propertyAddress1"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="123 Easy St"
+                            >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="propertyAddress2" class="control-label col-sm-6">Property City, State, ZIP</label>
+                        <label
+                            for="propertyAddress2"
+                            class="control-label col-sm-6"
+                        >Property City, State, ZIP</label>
                         <div class="col-sm-6">
-                            <input id="propertyAddress2" name="propertyAddress2" type="text" required="required"
-                                class="form-control" value="Anywhere, ST 12345">
+                            <input
+                                id="propertyAddress2"
+                                name="propertyAddress2"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="Anywhere, ST 12345"
+                            >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="ficoScore" class="control-label col-sm-6">Borrower Middle FICO Score</label>
+                        <label
+                            for="ficoScore"
+                            class="control-label col-sm-6"
+                        >Borrower Middle FICO Score</label>
                         <div class="col-sm-6">
-                            <input id="ficoScore" name="ficoScore" type="number" class="form-control" value="800" data-cell="C13">
+                            <input
+                                id="ficoScore"
+                                name="ficoScore"
+                                type="number"
+                                class="form-control"
+                                value="800"
+                                data-cell="C13"
+                            >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="numUnits" class="control-label col-sm-6"># of Units</label>
+                        <label
+                            for="numUnits"
+                            class="control-label col-sm-6"
+                        ># of Units</label>
                         <div class="col-sm-6">
-                            <input id="numUnits" name="numUnits" type="number" class="form-control" step="1" value="1" data-cell="C14">
+                            <input
+                                id="numUnits"
+                                name="numUnits"
+                                type="number"
+                                class="form-control"
+                                step="1"
+                                value="1"
+                                data-cell="C14"
+                            >
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="purposeOfLoan" class="control-label col-sm-6">Purpose of Loan</label>
+                        <label
+                            for="purposeOfLoan"
+                            class="control-label col-sm-6"
+                        >Purpose of Loan</label>
                         <div class="col-sm-6">
-                            <select id="purposeOfLoan" name="purposeOfLoan" required="required"
-                                class="select form-control" data-cell="C15">
+                            <select
+                                id="purposeOfLoan"
+                                name="purposeOfLoan"
+                                required="required"
+                                class="select form-control"
+                                data-cell="C15"
+                            >
                                 <option value="Purchase">Purchase</option>
-                                <option value="RateAndTerm" selected>Rate &amp; Term</option>
+                                <option
+                                    value="RateAndTerm"
+                                    selected
+                                >Rate &amp; Term</option>
                                 <option value="Cashout">Cashout</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="valueBorrowerPrimary" class="control-label col-sm-6">Value of Borrower's
+                        <label
+                            for="valueBorrowerPrimary"
+                            class="control-label col-sm-6"
+                        >Value of Borrower's
                             Primary</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group">
                                 <div class="input-group-addon">$</div> -->
-                                <input id="valueBorrowerPrimary" name="valueBorrowerPrimary" type="text"
-                                    required="required" class="form-control" value="2000000" data-cell="E10" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div>
+                            <input
+                                id="valueBorrowerPrimary"
+                                name="valueBorrowerPrimary"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="2000000"
+                                data-cell="E10"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div>
                             </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="valueSubjectProperty" class="control-label col-sm-6">Value of Subject
+                        <label
+                            for="valueSubjectProperty"
+                            class="control-label col-sm-6"
+                        >Value of Subject
                             Property</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group">
                                 <div class="input-group-addon">$</div> -->
-                                <input id="valueSubjectProperty" name="valueSubjectProperty" type="text"
-                                    required="required" class="form-control" value="1000000" data-cell="E11" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div>
+                            <input
+                                id="valueSubjectProperty"
+                                name="valueSubjectProperty"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="1000000"
+                                data-cell="E11"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div>
                             </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="proposedLoanAmt" class="control-label col-sm-6">Proposed Loan Amount</label>
+                        <label
+                            for="proposedLoanAmt"
+                            class="control-label col-sm-6"
+                        >Proposed Loan Amount</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group">
                                 <div class="input-group-addon">$</div> -->
-                                <input id="proposedLoanAmt" name="proposedLoanAmt" type="text" required="required"
-                                    class="form-control" value="450000" data-cell="E12" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div>
+                            <input
+                                id="proposedLoanAmt"
+                                name="proposedLoanAmt"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="450000"
+                                data-cell="E12"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div>
                             </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="subjectPropertyEstMonthlyRent" class="control-label col-sm-6">Subject Property Est.
+                        <label
+                            for="subjectPropertyEstMonthlyRent"
+                            class="control-label col-sm-6"
+                        >Subject Property Est.
                             Monthly Rent</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group">
                                 <div class="input-group-addon">$</div> -->
-                                <input id="subjectPropertyEstMonthlyRent" name="subjectPropertyEstMonthlyRent"
-                                    type="text" required="required" class="form-control" value="5000" data-cell="E13" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div>
+                            <input
+                                id="subjectPropertyEstMonthlyRent"
+                                name="subjectPropertyEstMonthlyRent"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="5000"
+                                data-cell="E13"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div>
                             </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="subjectPropertyEstMonthlyInsur" class="control-label col-sm-6">Subject Property Est.
+                        <label
+                            for="subjectPropertyEstMonthlyInsur"
+                            class="control-label col-sm-6"
+                        >Subject Property Est.
                             Monthly Insurance</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <!-- <div class="input-group-addon">$</div> -->
-                                <input id="subjectPropertyEstMonthlyInsur" name="subjectPropertyEstMonthlyInsur"
-                                    type="text" required="required" class="form-control" value="250" data-cell="E14" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div>
+                            <!-- <div class="input-group-addon">$</div> -->
+                            <input
+                                id="subjectPropertyEstMonthlyInsur"
+                                name="subjectPropertyEstMonthlyInsur"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="250"
+                                data-cell="E14"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div>
                             </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="subjectPropertyEstMonthlyPropTaxes" class="control-label col-sm-6">Subject Property
+                        <label
+                            for="subjectPropertyEstMonthlyPropTaxes"
+                            class="control-label col-sm-6"
+                        >Subject Property
                             Est. Monthly Property Taxes</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <!-- <div class="input-group-addon">$</div> -->
-                                <input id="subjectPropertyEstMonthlyPropTaxes" name="subjectPropertyEstMonthlyPropTaxes"
-                                    type="text" required="required" class="form-control" value="1200" data-cell="E15" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div> -->
+                            <!-- <div class="input-group-addon">$</div> -->
+                            <input
+                                id="subjectPropertyEstMonthlyPropTaxes"
+                                name="subjectPropertyEstMonthlyPropTaxes"
+                                type="text"
+                                required="required"
+                                class="form-control"
+                                value="1200"
+                                data-cell="E15"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="optMonthlyHoaDues" class="control-label col-sm-6">Monthly Homeowners Association
+                        <label
+                            for="optMonthlyHoaDues"
+                            class="control-label col-sm-6"
+                        >Monthly Homeowners Association
                             Dues (if any)</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <!-- <div class="input-group-addon">$</div> -->
-                                <input id="optMonthlyHoaDues" name="optMonthlyHoaDues" type="text"
-                                    class="form-control" value="0" data-cell="E16" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div> -->
+                            <!-- <div class="input-group-addon">$</div> -->
+                            <input
+                                id="optMonthlyHoaDues"
+                                name="optMonthlyHoaDues"
+                                type="text"
+                                class="form-control"
+                                value="0"
+                                data-cell="E16"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="radioInterestOnlyDesired" class="control-label col-sm-6">Interest Only
+                        <label
+                            for="radioInterestOnlyDesired"
+                            class="control-label col-sm-6"
+                        >Interest Only
                             Desired?</label>
                         <div class="col-sm-6">
                             <label class="radio-inline">
-                                <input type="radio" name="radioInterestOnlyDesired" value="Yes" checked data-cell="E19"> Yes </label>
+                                <input
+                                    type="radio"
+                                    name="radioInterestOnlyDesired"
+                                    value="Yes"
+                                    checked
+                                    data-cell="E19"
+                                > Yes </label>
                             <label class="radio-inline">
-                                <input type="radio" name="radioInterestOnlyDesired" value="No" data-cell="E19"> No </label>
-                            <span id="radioInterestOnlyDesiredHelpBlock" class="help-block">Typical answer is: No</span>
+                                <input
+                                    type="radio"
+                                    name="radioInterestOnlyDesired"
+                                    value="No"
+                                    data-cell="E19"
+                                > No </label>
+                            <span
+                                id="radioInterestOnlyDesiredHelpBlock"
+                                class="help-block"
+                            >Typical answer is: No</span>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="radioUseNoRatioInstead" class="control-label col-sm-6">Use No Ratio Instead?</label>
+                        <label
+                            for="radioUseNoRatioInstead"
+                            class="control-label col-sm-6"
+                        >Use No Ratio Instead?</label>
                         <div class="col-sm-6">
                             <label class="radio-inline">
-                                <input type="radio" name="radioUseNoRatioInstead" value="Yes" checked data-cell="E20"> Yes </label>
+                                <input
+                                    type="radio"
+                                    name="radioUseNoRatioInstead"
+                                    value="Yes"
+                                    checked
+                                    data-cell="E20"
+                                > Yes </label>
                             <label class="radio-inline">
-                                <input type="radio" name="radioUseNoRatioInstead" value="No" data-cell="E20"> No </label>
-                            <span id="radioUseNoRatioInsteadHelpBlock" class="help-block">Typical answer is: No</span>
+                                <input
+                                    type="radio"
+                                    name="radioUseNoRatioInstead"
+                                    value="No"
+                                    data-cell="E20"
+                                > No </label>
+                            <span
+                                id="radioUseNoRatioInsteadHelpBlock"
+                                class="help-block"
+                            >Typical answer is: No</span>
                         </div>
                     </div>
                     <div class="form-group bg-info">
-                        <label for="outLtvRatio" class="control-label col-sm-6">Loan-to-Value (LTV) Ratio</label>
+                        <label
+                            for="outLtvRatio"
+                            class="control-label col-sm-6"
+                        >Loan-to-Value (LTV) Ratio</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <input id="outLtvRatio" name="outLtvRatio" type="text" class="form-control disabled"
-                                    readonly disabled data-cell="C16" data-formula="E11/E12" data-format="0.00 %">
-                                <!-- <div class="input-group-addon">%</div> -->
+                            <input
+                                id="outLtvRatio"
+                                name="outLtvRatio"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="C16"
+                                data-formula="E11/E12"
+                                data-format="0.00 %"
+                            >
+                            <!-- <div class="input-group-addon">%</div> -->
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="form-group bg-info">
-                        <label for="outEstIntRate" class="control-label col-sm-6">Estimated Interest Rate</label>
+                        <label
+                            for="outEstIntRate"
+                            class="control-label col-sm-6"
+                        >Estimated Interest Rate</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <input id="outEstIntRate" name="outEstIntRate" type="text" readonly disabled
-                                    class="form-control disabled" data-formula="+AB23" data-format="0.00 %">
-                                <!-- <div class="input-group-addon">%</div> -->
+                            <input
+                                id="outEstIntRate"
+                                name="outEstIntRate"
+                                type="text"
+                                readonly
+                                disabled
+                                class="form-control disabled"
+                                data-formula="+AB23"
+                                data-format="0.00 %"
+                            >
+                            <!-- <div class="input-group-addon">%</div> -->
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="form-group bg-info">
-                        <label for="outPrincipalAndInterest" class="control-label col-sm-6">Principal &amp;
+                        <label
+                            for="outPrincipalAndInterest"
+                            class="control-label col-sm-6"
+                        >Principal &amp;
                             Interest</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <!-- <div class="input-group-addon">$</div> -->
-                                <input id="outPrincipalAndInterest" name="outPrincipalAndInterest" type="text" readonly disabled
-                                    class="form-control disabled" data-formula="IF(AB25="Error","Error",PMT(AB25/12,360,E12,0,1)*-1)" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div> -->
+                            <!-- <div class="input-group-addon">$</div> -->
+                            <input
+                                id="outPrincipalAndInterest"
+                                name="outPrincipalAndInterest"
+                                type="text"
+                                readonly
+                                disabled
+                                class="form-control disabled"
+                                data-formula="IF(AB25='Error','Error',PMT(AB25/12,360,E12,0,1)*-1)"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
                         </div>
                     </div>
                     <div class="form-group bg-info">
-                        <label for="outSubjectPiti" class="control-label col-sm-6">Subject Property Combined Payment
+                        <label
+                            for="outSubjectPiti"
+                            class="control-label col-sm-6"
+                        >Subject Property Combined Payment
                             (PITI)</label>
                         <div class="col-sm-6">
                             <!-- <div class="input-group"> -->
-                                <!-- <div class="input-group-addon">$</div> -->
-                                <input id="outSubjectPiti" name="outSubjectPiti" type="text" readonly disabled
-                                    class="form-control disabled" data-formula="SUM(E14:E17)" data-format="$ 0,0[.]00">
-                                <!-- <div class="input-group-addon">.00</div> -->
+                            <!-- <div class="input-group-addon">$</div> -->
+                            <input
+                                id="outSubjectPiti"
+                                name="outSubjectPiti"
+                                type="text"
+                                readonly
+                                disabled
+                                class="form-control disabled"
+                                data-formula="SUM(E14:E17)"
+                                data-format="$ 0,0[.]00"
+                            >
+                            <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div>  -->
                         </div>
                     </div>
                     <div class="form-group bg-info">
-                        <label for="outDscrValue" class="control-label col-sm-6">Debt Service Coverage Ratio
+                        <label
+                            for="outDscrValue"
+                            class="control-label col-sm-6"
+                        >Debt Service Coverage Ratio
                             (DSCR)</label>
                         <div class="col-sm-6">
-                            <input id="outDscrValue" name="outDscrValue" type="text" class="form-control disabled"
-                                readonly disabled data-formula="IF(AB17="NA","NOOOOOOO",+E13/E18)">
+                            <input
+                                id="outDscrValue"
+                                name="outDscrValue"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-formula="IF(AB17='NA','Error',+E13/E18)"
+                                data-format="0.00"
+                            >
                         </div>
                     </div>
 
                     <!--XXX BEGIN DEBUG VALUES-->
                     <hr>
                     <div class="form-group bg-danger">
-                        <label for="hidABS_Score" class="control-label col-sm-6">ABS_Score</label>
+                        <label
+                            for="hidABS_Score"
+                            class="control-label col-sm-6"
+                        >ABS_Score</label>
                         <div class="col-sm-6">
-                            <input id="hidABS_Score" name="hidABS_Score" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB14">
+                            <input
+                                id="hidABS_Score"
+                                name="hidABS_Score"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB14"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidABS_LTV" class="control-label col-sm-6">ABS_LTV</label>
+                        <label
+                            for="hidABS_LTV"
+                            class="control-label col-sm-6"
+                        >ABS_LTV</label>
                         <div class="col-sm-6">
-                            <input id="hidABS_LTV" name="hidABS_LTV" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB15">
+                            <input
+                                id="hidABS_LTV"
+                                name="hidABS_LTV"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB15"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidBase_Rate" class="control-label col-sm-6">Base_Rate</label>
+                        <label
+                            for="hidBase_Rate"
+                            class="control-label col-sm-6"
+                        >Base_Rate</label>
                         <div class="col-sm-6">
-                            <input id="hidBase_Rate" name="hidBase_Rate" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB17">
+                            <input
+                                id="hidBase_Rate"
+                                name="hidBase_Rate"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB17"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidTWO_to_FOUR_Units" class="control-label col-sm-6">TWO_to_FOUR_Units</label>
+                        <label
+                            for="hidTWO_to_FOUR_Units"
+                            class="control-label col-sm-6"
+                        >TWO_to_FOUR_Units</label>
                         <div class="col-sm-6">
-                            <input id="hidTWO_to_FOUR_Units" name="hidTWO_to_FOUR_Units" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB19">
+                            <input
+                                id="hidTWO_to_FOUR_Units"
+                                name="hidTWO_to_FOUR_Units"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB19"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidIO" class="control-label col-sm-6">IO</label>
+                        <label
+                            for="hidIO"
+                            class="control-label col-sm-6"
+                        >IO</label>
                         <div class="col-sm-6">
-                            <input id="hidIO" name="hidIO" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB20">
+                            <input
+                                id="hidIO"
+                                name="hidIO"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB20"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidNo_DSCR" class="control-label col-sm-6">No_DSCR</label>
+                        <label
+                            for="hidNo_DSCR"
+                            class="control-label col-sm-6"
+                        >No_DSCR</label>
                         <div class="col-sm-6">
-                            <input id="hidNo_DSCR" name="hidNo_DSCR" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB21">
+                            <input
+                                id="hidNo_DSCR"
+                                name="hidNo_DSCR"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB21"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidCashOut" class="control-label col-sm-6">CashOut</label>
+                        <label
+                            for="hidCashOut"
+                            class="control-label col-sm-6"
+                        >CashOut</label>
                         <div class="col-sm-6">
-                            <input id="hidCashOut" name="hidCashOut" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB22">
+                            <input
+                                id="hidCashOut"
+                                name="hidCashOut"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB22"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidNet_BPC_Rate" class="control-label col-sm-6">Net_BPC_Rate</label>
+                        <label
+                            for="hidNet_BPC_Rate"
+                            class="control-label col-sm-6"
+                        >Net_BPC_Rate</label>
                         <div class="col-sm-6">
-                            <input id="hidNet_BPC_Rate" name="hidNet_BPC_Rate" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB23">
+                            <input
+                                id="hidNet_BPC_Rate"
+                                name="hidNet_BPC_Rate"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB23"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidLPC_Add" class="control-label col-sm-6">LPC_Add</label>
+                        <label
+                            for="hidLPC_Add"
+                            class="control-label col-sm-6"
+                        >LPC_Add</label>
                         <div class="col-sm-6">
-                            <input id="hidLPC_Add" name="hidLPC_Add" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB24">
+                            <input
+                                id="hidLPC_Add"
+                                name="hidLPC_Add"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB24"
+                            >
                         </div>
                     </div>
                     <div class="form-group bg-danger">
-                        <label for="hidNet_LPC_Rate" class="control-label col-sm-6">Net_LPC_Rate</label>
+                        <label
+                            for="hidNet_LPC_Rate"
+                            class="control-label col-sm-6"
+                        >Net_LPC_Rate</label>
                         <div class="col-sm-6">
-                            <input id="hidNet_LPC_Rate" name="hidNet_LPC_Rate" type="text" class="form-control disabled"
-                                readonly disabled data-cell="AB25">
+                            <input
+                                id="hidNet_LPC_Rate"
+                                name="hidNet_LPC_Rate"
+                                type="text"
+                                class="form-control disabled"
+                                readonly
+                                disabled
+                                data-cell="AB25"
+                            >
                         </div>
                     </div>
                     <hr>
@@ -292,7 +627,11 @@
 
                     <div class="form-group row">
                         <div class="col-sm-offset-6 col-sm-6">
-                            <button name="submit" type="submit" class="btn btn-default">Calculate</button>
+                            <button
+                                name="submit"
+                                type="submit"
+                                class="btn btn-default"
+                            >Calculate</button>
                         </div>
                     </div>
                 </form>
@@ -306,7 +645,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/numeral@1.4.5/numeral.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/xsanisty/calx.js@2.2.7/jquery-calx-2.2.7.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script>
         // Wait for the DOM to be ready
         $(function () {
@@ -320,15 +659,17 @@
             };
             var _OPTS_DOLLAR_AMT = {
                 required: true,
-                number: true,
+                // number: true,
+                // step: 0.01,
+                currency: ['$', false], // dollar sign optional
                 min: 0,
-                step: 0.01,
             };
             var _OPTS_DOLLAR_AMT_OPTIONAL = {
                 required: false,
-                number: true,
+                // number: true,
+                // step: 0.01,
+                currency: true,
                 min: 0,
-                step: 0.01,
             };
 
             // override jquery validate plugin defaults
@@ -362,7 +703,7 @@
 
             // Initialize form validation on the registration form.
             // It has the name attribute "registration"
-            $("form#XXX").validate({
+            $("form#calxForm").validate({
                 // Specify validation rules
                 rules: {
                     // The key name on the left side is the name attribute
@@ -423,7 +764,7 @@
                 }
             }); //END: `$(...).validate(...)`
 
-            $("form#XXX").calx({
+            $("form#calxForm").calx({
                 data: {
                     /* beautify ignore:start */
                     //BEGIN: Pricing as of 6/11/21
