@@ -358,8 +358,8 @@
                                 readonly
                                 disabled
                                 data-cell="C16"
-                                data-formula="E11/E12"
-                                data-format="0.00 %"
+                                data-formula="+E12/E11"
+                                data-format="0.00%"
                             >
                             <!-- <div class="input-group-addon">%</div> -->
                             <!-- </div> -->
@@ -380,7 +380,7 @@
                                 disabled
                                 class="form-control"
                                 data-formula="+K23"
-                                data-format="0.00 %"
+                                data-format="0.00%"
                             >
                             <!-- <div class="input-group-addon">%</div> -->
                             <!-- </div> -->
@@ -783,7 +783,7 @@
                 data: {
                     /* beautify ignore:start */
                     //BEGIN: Pricing as of 6/11/21
-                    J5: '',   K5: 50,     L5: 55,     M5: 60,     N5: 65,     O5: 70,     P5: 75,     Q5: 80,
+                    J5: '',   K5: .5,    L5: .55,    M5: .6,    N5: .65,    O5: .7,    P5: .75,    Q5: .8,
                     J6: 760,  K6: 3.999,  L6: 4.125,  M6: 4.250,  N6: 4.250,  O6: 4.375,  P6: 4.500,  Q6: 4.625,
                     J7: 740,  K7: 4.125,  L7: 4.250,  M7: 4.375,  N7: 4.375,  O7: 4.500,  P7: 4.625,  Q7: 4.750,
                     J8: 720,  K8: 4.250,  L8: 4.375,  M8: 4.500,  N8: 4.500,  O8: 4.625,  P8: 4.750,  Q8: 4.999,
@@ -798,30 +798,41 @@
                     },
                     K15: {//ABS_LTV
                         formula: 'IF(C16<=0.5,0.5,IF(AND(C16<=0.55,C16>0.5),0.55,IF(AND(C16<=0.6,C16>0.55),0.6,IF(AND(C16<=0.65,C16>0.6),0.65,IF(AND(C16<=0.7,C16>0.65),0.7,IF(AND(C16<=0.75,C16>0.7),0.75,IF(AND(C16<=0.8,C16>0.75),0.8,IF(C16>0.75,"NA"))))))))',
+                        format: '0%',
                     },
-                    K17: {//Base_Rate
-                        formula: 'INDEX(K6:Q12,MATCH(K14,J6:J12,-1),MATCH(K15,K5:Q5,1))',
+                    K17: {//Base_Rate  (A==>J, B==>K, ...)
+                        // formula: 'INDEX(K6:Q12, MATCH(K14,J6:J12,-1), MATCH(K15,K5:Q5,1))',
+                        //SUMPRODUCT(vlookup_column_range = vlookup_value) * (hlookup_row_range = hlookup_value) * data_array)
+                        formula: 'SUMPRODUCT( (J6:J12=K14) * (K5:Q5=K15) * K6:Q12)',
+                        format: '0.000%',
                     },
                     K19: {//TWO_to_FOUR_Units
                         formula: 'IF(C14>=2,0.25%,0)',
+                        format: '0.000%',
                     },
                     K20: {//IO
                         formula: 'IF(E19="Yes",0.25%,0)',
+                        format: '0.000%',
                     },
                     K21: {//No_DSCR
                         formula: 'IF(E20="Yes",0.25%,0)',
+                        format: '0.000%',
                     },
                     K22: {//CashOut
                         formula: 'IF(C15="Cashout",0.25%,0)',
+                        format: '0.000%',
                     },
                     K23: {//Net_BPC_Rate
                         formula: '+K17+SUM(K19:K22)',
+                        format: '0.000%',
                     },
                     K24: {//LPC_Add
                         formula: 'IF(C18>0.02,0.01,+C18/2)',
+                        format: '0.000%',
                     },
                     K25: {//Net_LPC_Rate
                         formula: '+K23+K24',
+                        format: '0.000%',
                     },
                 },//END: `data`
                 // onAfterCalculate: function () { /* do the process here */ }
