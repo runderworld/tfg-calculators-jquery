@@ -144,7 +144,7 @@
                                 class="form-control"
                                 value="2000000"
                                 data-cell="E10"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div>
                             </div> -->
@@ -167,7 +167,7 @@
                                 class="form-control"
                                 value="1000000"
                                 data-cell="E11"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div>
                             </div> -->
@@ -189,7 +189,7 @@
                                 class="form-control"
                                 value="450000"
                                 data-cell="E12"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div>
                             </div> -->
@@ -212,7 +212,7 @@
                                 class="form-control"
                                 value="5000"
                                 data-cell="E13"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div>
                             </div> -->
@@ -235,7 +235,7 @@
                                 class="form-control"
                                 value="250"
                                 data-cell="E14"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div>
                             </div> -->
@@ -258,7 +258,7 @@
                                 class="form-control"
                                 value="1200"
                                 data-cell="E15"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
@@ -280,7 +280,7 @@
                                 class="form-control"
                                 value="0"
                                 data-cell="E16"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
@@ -352,7 +352,7 @@
                                 id="outLtvRatio"
                                 name="outLtvRatio"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
                                 data-cell="C16"
@@ -376,8 +376,8 @@
                                 type="text"
                                 readonly
                                 disabled
-                                class="form-control disabled"
-                                data-formula="+AB23"
+                                class="form-control"
+                                data-formula="+K23"
                                 data-format="0.00 %"
                             >
                             <!-- <div class="input-group-addon">%</div> -->
@@ -399,9 +399,9 @@
                                 type="text"
                                 readonly
                                 disabled
-                                class="form-control disabled"
-                                data-formula="IF(AB25='Error','Error',PMT(AB25/12,360,E12,0,1)*-1)"
-                                data-format="$ 0,0[.]00"
+                                class="form-control"
+                                data-formula="IF(K25='Error','Error',PMT(K25/12,360,E12,0,1)*-1)"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div> -->
@@ -422,9 +422,9 @@
                                 type="text"
                                 readonly
                                 disabled
-                                class="form-control disabled"
+                                class="form-control"
                                 data-formula="SUM(E14:E17)"
-                                data-format="$ 0,0[.]00"
+                                data-format="$0,0[.]00"
                             >
                             <!-- <div class="input-group-addon">.00</div> -->
                             <!-- </div>  -->
@@ -441,10 +441,10 @@
                                 id="outDscrValue"
                                 name="outDscrValue"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-formula="IF(AB17='NA','Error',+E13/E18)"
+                                data-formula="IF(K17='NA','Error',+E13/E18)"
                                 data-format="0.00"
                             >
                         </div>
@@ -462,10 +462,10 @@
                                 id="hidABS_Score"
                                 name="hidABS_Score"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB14"
+                                data-cell="K14"
                             >
                         </div>
                     </div>
@@ -479,10 +479,10 @@
                                 id="hidABS_LTV"
                                 name="hidABS_LTV"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB15"
+                                data-cell="K15"
                             >
                         </div>
                     </div>
@@ -496,10 +496,10 @@
                                 id="hidBase_Rate"
                                 name="hidBase_Rate"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB17"
+                                data-cell="K17"
                             >
                         </div>
                     </div>
@@ -513,10 +513,10 @@
                                 id="hidTWO_to_FOUR_Units"
                                 name="hidTWO_to_FOUR_Units"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB19"
+                                data-cell="K19"
                             >
                         </div>
                     </div>
@@ -530,10 +530,10 @@
                                 id="hidIO"
                                 name="hidIO"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB20"
+                                data-cell="K20"
                             >
                         </div>
                     </div>
@@ -547,10 +547,10 @@
                                 id="hidNo_DSCR"
                                 name="hidNo_DSCR"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB21"
+                                data-cell="K21"
                             >
                         </div>
                     </div>
@@ -564,10 +564,10 @@
                                 id="hidCashOut"
                                 name="hidCashOut"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB22"
+                                data-cell="K22"
                             >
                         </div>
                     </div>
@@ -581,10 +581,10 @@
                                 id="hidNet_BPC_Rate"
                                 name="hidNet_BPC_Rate"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB23"
+                                data-cell="K23"
                             >
                         </div>
                     </div>
@@ -598,10 +598,10 @@
                                 id="hidLPC_Add"
                                 name="hidLPC_Add"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB24"
+                                data-cell="K24"
                             >
                         </div>
                     </div>
@@ -615,30 +615,36 @@
                                 id="hidNet_LPC_Rate"
                                 name="hidNet_LPC_Rate"
                                 type="text"
-                                class="form-control disabled"
+                                class="form-control"
                                 readonly
                                 disabled
-                                data-cell="AB25"
+                                data-cell="K25"
                             >
                         </div>
                     </div>
                     <hr>
                     <!--XXX END DEBUG VALUES-->
 
-                    <div class="form-group row">
-                        <div class="col-sm-offset-6 col-sm-6">
+                    <div class="form-group row small">
+                        <div class="col-xs-12 col-sm-3 text-center">
                             <button
                                 name="submit"
                                 type="submit"
-                                class="btn btn-default"
+                                class="btn btn-block btn-info"
                             >Calculate</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-9 small">
+                            <p class="small" style="margin-top:10px;">
+                                <em>The illustration shown above is for investment properties only, therefore this loan will be deemed for Business Purpose
+                                Only. The rate and terms listed above are not a binding agreement by Truss Financial Group as there are other factors to
+                                be considered upon application and evaluation of the subject property.</em>
+                            </p>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
@@ -647,7 +653,6 @@
     <script src="https://cdn.jsdelivr.net/gh/xsanisty/calx.js@2.2.7/jquery-calx-2.2.7.min.js"></script>
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
     <script>
-        // Wait for the DOM to be ready
         $(function () {
             var _ERR_MSG_PERCENT = 'Please enter a valid percentage (up to two decimal places)';
             var _ERR_MSG_DOLLAR = 'Please enter a valid dollar amount';
@@ -679,13 +684,15 @@
                 highlight: function (element, errorClass, validClass) {
                     // Only validation controls
                     if (!$(element).hasClass('novalidation')) {
-                        $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+                        // $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+                        $(element).parent().removeClass('has-success').addClass('has-error');
                     }
                 },
                 unhighlight: function (element, errorClass, validClass) {
                     // Only validation controls
                     if (!$(element).hasClass('novalidation')) {
-                        $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+                        // $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+                        $(element).parent().removeClass('has-error').addClass('has-success');
                     }
                 },
                 errorPlacement: function (error, element) {
@@ -701,9 +708,15 @@
                 }
             }); //END: `$.validator.setDefaults(...)`
 
+            $('form#calxForm').bind('keypress', function (event) {
+                if (event.keyCode === 13) {
+                    return false;
+                }
+            });
+
             // Initialize form validation on the registration form.
             // It has the name attribute "registration"
-            $("form#calxForm").validate({
+            $('form#calxForm').validate({
                 // Specify validation rules
                 rules: {
                     // The key name on the left side is the name attribute
@@ -755,58 +768,58 @@
                     XXX: {
                         XXX: _ERR_MSG_DOLLAR,
                     },
-                    YYY: "YYY",
+                    YYY: 'YYY',
                 },
                 // Make sure the form is submitted to the destination defined
                 // in the "action" attribute of the form when valid
                 submitHandler: function (form) {
-                    //form.submit();
+                    //form.submit(); // XXX TODO
                 }
             }); //END: `$(...).validate(...)`
 
-            $("form#calxForm").calx({
+            $('form#calxForm').calx({
                 data: {
                     /* beautify ignore:start */
                     //BEGIN: Pricing as of 6/11/21
-                    AA5: '',   AB5: 50,     AC5: 55,     AD5: 60,     AE5: 65,     AF5: 70,     AG5: 75,     AH5: 80,
-                    AA6: 760,  AB6: 3.999,  AC6: 4.125,  AD6: 4.250,  AE6: 4.250,  AF6: 4.375,  AG6: 4.500,  AH6: 4.625,
-                    AA7: 740,  AB7: 4.125,  AC7: 4.250,  AD7: 4.375,  AE7: 4.375,  AF7: 4.500,  AG7: 4.625,  AH7: 4.750,
-                    AA8: 720,  AB8: 4.250,  AC8: 4.375,  AD8: 4.500,  AE8: 4.500,  AF8: 4.625,  AG8: 4.750,  AH8: 4.999,
-                    AA9: 700,  AB9: 4.375,  AC9: 4.500,  AD9: 4.625,  AE9: 4.750,  AF9: 4.875,  AG9: 4.999,  AH9: 5.250,
-                    AA10: 680, AB10: 4.500, AC10: 4.625, AD10: 4.750, AE10: 4.875, AF10: 5.125, AG10: 5.250, AH10: 5.625,
-                    AA11: 660, AB11: 4.875, AC11: 4.999, AD11: 5.125, AE11: 5.375, AF11: 5.625, AG11: 5.625, AH11: 6.250,
-                    AA12: 640, AB12: 5.250, AC12: 5.375, AD12: 5.500, AE12: 5.750, AF12: 5.999, AG12: 6.250, AH12: 6.875,
+                    J5: '',   K5: 50,     L5: 55,     M5: 60,     N5: 65,     O5: 70,     P5: 75,     Q5: 80,
+                    J6: 760,  K6: 3.999,  L6: 4.125,  M6: 4.250,  N6: 4.250,  O6: 4.375,  P6: 4.500,  Q6: 4.625,
+                    J7: 740,  K7: 4.125,  L7: 4.250,  M7: 4.375,  N7: 4.375,  O7: 4.500,  P7: 4.625,  Q7: 4.750,
+                    J8: 720,  K8: 4.250,  L8: 4.375,  M8: 4.500,  N8: 4.500,  O8: 4.625,  P8: 4.750,  Q8: 4.999,
+                    J9: 700,  K9: 4.375,  L9: 4.500,  M9: 4.625,  N9: 4.750,  O9: 4.875,  P9: 4.999,  Q9: 5.250,
+                    J10: 680, K10: 4.500, L10: 4.625, M10: 4.750, N10: 4.875, O10: 5.125, P10: 5.250, Q10: 5.625,
+                    J11: 660, K11: 4.875, L11: 4.999, M11: 5.125, N11: 5.375, O11: 5.625, P11: 5.625, Q11: 6.250,
+                    J12: 640, K12: 5.250, L12: 5.375, M12: 5.500, N12: 5.750, O12: 5.999, P12: 6.250, Q12: 6.875,
                     //END
                     /* beautify ignore:end */
-                    AB14: {//ABS_Score
+                    K14: {//ABS_Score
                         formula: 'IF(C13<660,"NA",IF(AND(C13<680,C13>=660),660,IF(AND(C13<700,C13>=680),680,IF(AND(C13<700,C13>=680),680,IF(AND(C13<720,C13>=700),700,IF(AND(C13<740,C13>=720),720,IF(AND(C13<760,C13>=740),740,IF(C13>=760,760))))))))',
                     },
-                    AB15: {//ABS_LTV
+                    K15: {//ABS_LTV
                         formula: 'IF(C16<=0.5,0.5,IF(AND(C16<=0.55,C16>0.5),0.55,IF(AND(C16<=0.6,C16>0.55),0.6,IF(AND(C16<=0.65,C16>0.6),0.65,IF(AND(C16<=0.7,C16>0.65),0.7,IF(AND(C16<=0.75,C16>0.7),0.75,IF(AND(C16<=0.8,C16>0.75),0.8,IF(C16>0.75,"NA"))))))))',
                     },
-                    AB17: {//Base_Rate
-                        formula: 'INDEX(AB6:AH12,MATCH(AB14,AA6:AA12,-1),MATCH(AB15,AB5:AH5,1))',
+                    K17: {//Base_Rate
+                        formula: 'INDEX(K6:Q12,MATCH(K14,J6:J12,-1),MATCH(K15,K5:Q5,1))',
                     },
-                    AB19: {//TWO_to_FOUR_Units
+                    K19: {//TWO_to_FOUR_Units
                         formula: 'IF(C14>=2,0.25%,0)',
                     },
-                    AB20: {//IO
+                    K20: {//IO
                         formula: 'IF(E19="Yes",0.25%,0)',
                     },
-                    AB21: {//No_DSCR
+                    K21: {//No_DSCR
                         formula: 'IF(E20="Yes",0.25%,0)',
                     },
-                    AB22: {//CashOut
+                    K22: {//CashOut
                         formula: 'IF(C15="Cashout",0.25%,0)',
                     },
-                    AB23: {//Net_BPC_Rate
-                        formula: '+AB17+SUM(AB19:AB22)',
+                    K23: {//Net_BPC_Rate
+                        formula: '+K17+SUM(K19:K22)',
                     },
-                    AB24: {//LPC_Add
+                    K24: {//LPC_Add
                         formula: 'IF(C18>0.02,0.01,+C18/2)',
                     },
-                    AB25: {//Net_LPC_Rate
-                        formula: '+AB23+AB24',
+                    K25: {//Net_LPC_Rate
+                        formula: '+K23+K24',
                     },
                 },//END: `data`
                 // onAfterCalculate: function () { /* do the process here */ }
